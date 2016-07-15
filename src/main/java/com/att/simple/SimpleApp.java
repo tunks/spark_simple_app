@@ -18,7 +18,7 @@ public class SimpleApp {
   public static void main(String[] args) {
     String logFile = "sample.txt"; 
     SparkConf conf = new SparkConf()
-//                          .setMaster("local")
+                         .setMaster("local")
                           .setAppName("Simple Application");
     JavaSparkContext sc = new JavaSparkContext(conf);
     JavaRDD<String> logData = sc.textFile(logFile).cache();
